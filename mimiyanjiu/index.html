@@ -1,0 +1,1014 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>秘密研究所-悬疑实验档案_睡前通勤解谜_和传统密室对比</title>
+    <meta name="description" content="秘密研究所提供悬疑实验档案与解谜内容，包含睡前通勤短篇、档案解密与逻辑推演，适合喜欢悬疑推理与沉浸式叙事的用户探索。">
+    <meta name="keywords" content="悬疑实验档案,解谜短篇,睡前通勤悬疑,逻辑推演,沉浸式叙事">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2312161c'/%3E%3Cpath d='M30 30 L50 18 L70 30 L70 70 L50 82 L30 70 Z' fill='none' stroke='%234f9eff' stroke-width='4'/%3E%3Ccircle cx='50' cy='50' r='8' fill='%234f9eff'/%3E%3C/svg%3E">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg: #0b0f14;
+            --panel: #11161d;
+            --panel-2: #171e27;
+            --border: #2a3340;
+            --text: #d7e0ea;
+            --text-2: #8a97a8;
+            --accent: #4f9eff;
+            --accent-2: #7b61ff;
+            --accent-glow: rgba(79, 158, 255, 0.15);
+            --radius: 12px;
+            --radius-sm: 8px;
+            --sticky-offset: 88px;
+            --font: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans SC', sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-padding-top: var(--sticky-offset); }
+        body {
+            font-family: var(--font);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            font-size: 15px;
+            overflow-x: hidden;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { color: #7bb8ff; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+        img, svg { display: block; max-width: 100%; }
+        .container {
+            width: 100%;
+            max-width: 1360px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* sticky announcement + header */
+        .sticky-wrap {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .announce-bar {
+            background: linear-gradient(90deg, #0f1a2e, #1a1430);
+            border-bottom: 1px solid #2a3a5a;
+            color: #b8c9e8;
+            font-size: 13px;
+            padding: 7px 0;
+            text-align: center;
+            letter-spacing: 0.3px;
+            line-height: 1.4;
+        }
+        .announce-bar strong { color: #7bb8ff; }
+        .site-header {
+            background: rgba(11, 15, 20, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+            padding: 10px 0;
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-shrink: 0;
+        }
+        .brand svg { width: 36px; height: 36px; }
+        .brand-text {
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #fff;
+            white-space: nowrap;
+        }
+        .brand-text span { color: var(--accent); }
+        .header-nav {
+            display: flex;
+            gap: 4px;
+            flex-wrap: wrap;
+            margin-left: auto;
+        }
+        .header-nav a {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--text-2);
+            transition: 0.2s;
+            white-space: nowrap;
+        }
+        .header-nav a:hover, .header-nav a:focus-visible {
+            background: var(--panel-2);
+            color: #fff;
+            outline: none;
+        }
+        .header-search {
+            display: flex;
+            align-items: center;
+            background: var(--panel-2);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 2px 4px 2px 14px;
+            min-width: 180px;
+        }
+        .header-search input {
+            background: transparent;
+            border: none;
+            color: var(--text);
+            padding: 6px 0;
+            font-size: 13px;
+            width: 100%;
+            outline: none;
+        }
+        .header-search input::placeholder { color: #5a6a7e; }
+        .header-search button {
+            background: var(--accent);
+            color: #0b0f14;
+            border-radius: 20px;
+            padding: 5px 14px;
+            font-weight: 600;
+            font-size: 12px;
+            transition: 0.2s;
+        }
+        .header-search button:hover { background: #7bb8ff; }
+
+        /* hero */
+        .hero {
+            padding: 36px 0 28px;
+            border-bottom: 1px solid var(--border);
+            background: radial-gradient(ellipse at 30% 40%, rgba(79, 158, 255, 0.08), transparent 60%);
+        }
+        .hero-inner {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        .hero-content { flex: 1 1 400px; }
+        .hero-badge {
+            display: inline-block;
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: var(--accent);
+            border: 1px solid rgba(79, 158, 255, 0.3);
+            padding: 4px 14px;
+            border-radius: 20px;
+            margin-bottom: 16px;
+        }
+        .hero-content h1 {
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: 2px;
+            color: #fff;
+            margin-bottom: 14px;
+        }
+        .hero-content h1 em {
+            font-style: normal;
+            color: var(--accent);
+            text-shadow: 0 0 30px var(--accent-glow);
+        }
+        .hero-desc {
+            font-size: 15px;
+            color: var(--text-2);
+            max-width: 540px;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+        .btn-primary {
+            background: var(--accent);
+            color: #0b0f14;
+            padding: 10px 26px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+        .btn-primary:hover { background: #7bb8ff; color: #0b0f14; }
+        .btn-ghost {
+            border: 1px solid var(--border);
+            padding: 10px 26px;
+            border-radius: 30px;
+            font-size: 14px;
+            color: var(--text);
+            transition: 0.2s;
+        }
+        .btn-ghost:hover { border-color: var(--accent); background: var(--panel-2); }
+        .hero-visual {
+            flex: 0 1 320px;
+            display: flex;
+            justify-content: center;
+        }
+        .hero-visual svg { width: 100%; max-width: 300px; height: auto; }
+
+        /* three column layout */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 180px 1fr 240px;
+            gap: 28px;
+            padding: 32px 0;
+        }
+        @media (max-width: 1024px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+            .left-col, .right-col {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+                gap: 10px;
+            }
+            .left-col .col-sticky, .right-col .col-sticky {
+                position: static;
+                display: contents;
+            }
+            .side-card { margin-bottom: 0; }
+        }
+        @media (max-width: 600px) {
+            .left-col, .right-col { grid-template-columns: 1fr; }
+        }
+
+        /* side col */
+        .col-sticky { position: sticky; top: calc(var(--sticky-offset) + 16px); }
+        .side-card {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        .side-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+        .side-nav { display: flex; flex-direction: column; gap: 2px; }
+        .side-nav a {
+            padding: 6px 8px;
+            border-radius: var(--radius-sm);
+            font-size: 13px;
+            color: var(--text-2);
+            transition: 0.15s;
+        }
+        .side-nav a:hover, .side-nav a:focus-visible {
+            background: var(--panel-2);
+            color: #fff;
+            outline: none;
+        }
+        .side-nav a.active { background: var(--accent-glow); color: var(--accent); }
+        .toc-list { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+        .toc-list a {
+            font-size: 12.5px;
+            color: var(--text-2);
+            padding: 4px 6px;
+            border-radius: 4px;
+            display: block;
+            border-left: 2px solid transparent;
+        }
+        .toc-list a:hover { color: #fff; border-left-color: var(--accent); background: var(--panel-2); }
+        .hot-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+        .hot-list li { font-size: 13px; }
+        .hot-list .hot-title { color: var(--text); display: block; }
+        .hot-list .hot-meta { font-size: 11px; color: var(--text-2); margin-top: 2px; }
+
+        /* center col */
+        .center-col { min-width: 0; }
+        .section {
+            margin-bottom: 36px;
+        }
+        .section-h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-h2::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        .intro-text p {
+            margin-bottom: 12px;
+            color: var(--text);
+            font-size: 14.5px;
+            line-height: 1.8;
+        }
+        .intro-text p strong { color: var(--accent); font-weight: 600; }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 14px;
+        }
+        .content-card {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 16px;
+            transition: 0.2s;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .content-card:hover { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent-glow); }
+        .card-title { font-size: 15px; font-weight: 700; color: #fff; line-height: 1.4; }
+        .card-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .tag {
+            font-size: 11px;
+            background: var(--panel-2);
+            border: 1px solid var(--border);
+            color: var(--text-2);
+            padding: 2px 8px;
+            border-radius: 12px;
+            white-space: nowrap;
+        }
+        .tag.accent { background: var(--accent-glow); border-color: rgba(79, 158, 255, 0.3); color: var(--accent); }
+        .card-desc { font-size: 13px; color: var(--text-2); line-height: 1.5; flex: 1; }
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #5a6a7e;
+            margin-top: 4px;
+            padding-top: 8px;
+            border-top: 1px solid var(--border);
+        }
+
+        .update-list { list-style: none; display: flex; flex-direction: column; gap: 0; }
+        .update-list li {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+            flex-wrap: wrap;
+        }
+        .update-list li .update-name { font-weight: 600; color: var(--text); min-width: 120px; }
+        .update-list li .update-summary { color: var(--text-2); font-size: 13px; flex: 1; }
+        .update-list li .update-badge { font-size: 11px; color: var(--accent); background: var(--accent-glow); padding: 1px 8px; border-radius: 10px; }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+        @media (max-width: 700px) { .category-grid { grid-template-columns: repeat(2, 1fr); } }
+        .cat-item {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 12px 10px;
+            text-align: center;
+            font-size: 13.5px;
+            font-weight: 600;
+            color: var(--text);
+            transition: 0.2s;
+        }
+        .cat-item:hover { border-color: var(--accent); background: var(--panel-2); color: #fff; }
+
+        .deep-dive { background: var(--panel); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
+        .deep-dive h3 {
+            font-size: 17px;
+            color: #fff;
+            margin: 18px 0 8px;
+            font-weight: 700;
+        }
+        .deep-dive h3:first-of-type { margin-top: 0; }
+        .deep-dive p { font-size: 14px; color: var(--text); line-height: 1.8; margin-bottom: 10px; }
+        .deep-dive ul { margin: 8px 0 14px 20px; color: var(--text-2); font-size: 14px; line-height: 1.8; }
+        .deep-dive ul li { margin-bottom: 4px; }
+
+        .guide-steps { counter-reset: step; list-style: none; padding: 0; }
+        .guide-steps li {
+            counter-increment: step;
+            padding: 10px 0 10px 44px;
+            position: relative;
+            font-size: 14px;
+            color: var(--text);
+            border-bottom: 1px solid var(--border);
+        }
+        .guide-steps li::before {
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 28px;
+            height: 28px;
+            background: var(--accent-glow);
+            color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        details.faq-item {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            margin-bottom: 8px;
+            padding: 0 16px;
+        }
+        details.faq-item summary {
+            padding: 12px 0;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        details.faq-item summary::-webkit-details-marker { display: none; }
+        details.faq-item summary::after {
+            content: '+';
+            font-size: 18px;
+            color: var(--accent);
+            transition: 0.2s;
+        }
+        details.faq-item[open] summary::after { content: '−'; }
+        details.faq-item p { font-size: 13.5px; color: var(--text-2); padding: 0 0 14px; line-height: 1.7; }
+
+        .comment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 10px;
+        }
+        .comment-card {
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 12px;
+            font-size: 13px;
+        }
+        .comment-card .comment-user { font-weight: 600; color: var(--accent); font-size: 12px; margin-bottom: 4px; }
+        .comment-card .comment-text { color: var(--text-2); line-height: 1.5; }
+
+        .news-list { list-style: none; }
+        .news-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .news-list li:last-child { border-bottom: none; }
+        .news-list .news-title { font-weight: 600; font-size: 14px; color: var(--text); }
+        .news-list .news-date { font-size: 11px; color: #5a6a7e; margin-left: 8px; }
+        .news-list .news-summary { font-size: 13px; color: var(--text-2); margin-top: 4px; }
+
+        .related-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .related-tags .tag { font-size: 12.5px; padding: 4px 14px; }
+
+        .testimonial {
+            background: linear-gradient(135deg, var(--panel-2), var(--panel));
+            border-left: 3px solid var(--accent);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            padding: 18px 20px;
+            font-size: 14px;
+            color: var(--text-2);
+            font-style: italic;
+        }
+
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 30px 0 20px;
+            margin-top: 20px;
+            font-size: 13px;
+            color: var(--text-2);
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+        .footer-brand { font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+        .footer-desc { font-size: 12.5px; color: var(--text-2); line-height: 1.6; max-width: 240px; }
+        .footer-col h4 { font-size: 13px; color: #fff; margin-bottom: 10px; }
+        .footer-col a { display: block; font-size: 12.5px; color: var(--text-2); padding: 3px 0; }
+        .footer-col a:hover { color: var(--accent); }
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 16px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            font-size: 12px;
+            color: #5a6a7e;
+        }
+        .search-feedback {
+            font-size: 13px;
+            color: var(--text-2);
+            padding: 8px 0;
+            display: none;
+        }
+        .search-feedback.show { display: block; }
+        .hidden-by-search { display: none !important; }
+
+        @media (max-width: 1024px) {
+            .hero-content h1 { font-size: 32px; }
+        }
+        @media (max-width: 600px) {
+            .hero-content h1 { font-size: 26px; }
+            .header-inner { gap: 8px; }
+            .header-search { min-width: 120px; }
+            .brand-text { font-size: 17px; }
+            .container { padding: 0 14px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="sticky-wrap">
+        <div class="announce-bar">
+            <strong>实验档案 · 夜间更新</strong> — 本周新增「环形废墟」解谜线，睡前通勤可读
+        </div>
+        <header class="site-header">
+            <div class="container header-inner">
+                <a href="/#top" class="brand" aria-label="秘密研究所首页">
+                    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect width="36" height="36" rx="8" fill="#11161d"/>
+                        <path d="M10 10 L18 5 L26 10 L26 26 L18 31 L10 26 Z" stroke="#4f9eff" stroke-width="2" fill="none"/>
+                        <circle cx="18" cy="18" r="4" fill="#4f9eff"/>
+                        <circle cx="18" cy="18" r="1.5" fill="#0b0f14"/>
+                    </svg>
+                    <span class="brand-text">秘密研究所</span>
+                </a>
+                <nav class="header-nav" aria-label="频道导航">
+                    <a href="/#hot">热门档案</a>
+                    <a href="/#updates">最新解谜</a>
+                    <a href="/#categories">分类索引</a>
+                    <a href="/#deep">深度解析</a>
+                    <a href="/#faq">常见问答</a>
+                </nav>
+                <div class="header-search">
+                    <input type="search" id="searchInput" placeholder="搜索档案/关键词…" aria-label="搜索内容">
+                    <button id="searchBtn" type="button">搜索</button>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <main id="top">
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-content">
+                    <div class="hero-badge">EXPERIMENT ARCHIVE</div>
+                    <h1>秘密研究所</h1>
+                    <p class="hero-desc">悬疑实验档案与逻辑解谜的聚集地。从睡前通勤的短篇推演到环环相扣的系列谜题，每份档案都藏着等待揭开的线索。</p>
+                    <div class="hero-actions">
+                        <a href="/#hot" class="btn-primary">进入档案库</a>
+                        <a href="/#deep" class="btn-ghost">阅读解析</a>
+                    </div>
+                </div>
+                <div class="hero-visual" aria-hidden="true">
+                    <svg viewBox="0 0 300 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="20" y="40" width="260" height="180" rx="12" fill="#11161d" stroke="#2a3340" stroke-width="1.5"/>
+                        <circle cx="150" cy="130" r="55" stroke="#4f9eff" stroke-width="1.5" opacity="0.3"/>
+                        <circle cx="150" cy="130" r="35" stroke="#7b61ff" stroke-width="1" opacity="0.4" stroke-dasharray="4 4"/>
+                        <circle cx="150" cy="130" r="6" fill="#4f9eff"/>
+                        <line x1="150" y1="75" x2="150" y2="100" stroke="#4f9eff" stroke-width="2"/>
+                        <line x1="150" y1="160" x2="150" y2="185" stroke="#4f9eff" stroke-width="2"/>
+                        <line x1="95" y1="130" x2="120" y2="130" stroke="#4f9eff" stroke-width="2"/>
+                        <line x1="180" y1="130" x2="205" y2="130" stroke="#4f9eff" stroke-width="2"/>
+                        <rect x="60" y="60" width="40" height="8" rx="4" fill="#2a3340"/>
+                        <rect x="60" y="74" width="26" height="6" rx="3" fill="#2a3340"/>
+                        <rect x="200" y="180" width="40" height="8" rx="4" fill="#2a3340"/>
+                        <rect x="220" y="194" width="20" height="6" rx="3" fill="#2a3340"/>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <div class="container main-grid">
+            <!-- 左栏 -->
+            <aside class="left-col" aria-label="栏目索引">
+                <div class="col-sticky">
+                    <div class="side-card">
+                        <div class="side-title">频道导航</div>
+                        <nav class="side-nav">
+                            <a href="/#intro">档案简介</a>
+                            <a href="/#hot">热门档案</a>
+                            <a href="/#updates">最新解谜</a>
+                            <a href="/#categories">分类索引</a>
+                            <a href="/#deep">深度解析</a>
+                            <a href="/#guide">体验指南</a>
+                            <a href="/#faq">常见问答</a>
+                            <a href="/#comments">读者评论</a>
+                            <a href="/#news">实验资讯</a>
+                            <a href="/#related">相关推荐</a>
+                        </nav>
+                    </div>
+                    <div class="side-card">
+                        <div class="side-title">分类筛选</div>
+                        <nav class="side-nav">
+                            <a href="/#categories">悬疑推理档案</a>
+                            <a href="/#categories">都市怪谈</a>
+                            <a href="/#categories">科幻实验</a>
+                            <a href="/#categories">历史谜案</a>
+                        </nav>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- 中栏 -->
+            <div class="center-col">
+
+                <!-- 1 内容简介 -->
+                <section id="intro" class="section">
+                    <h2 class="section-h2">档案简介 · 秘密研究所的世界观</h2>
+                    <div class="intro-text">
+                        <p>秘密研究所是一个围绕悬疑实验档案与逻辑解谜构建的内容站点。这里没有旁观者，每一份记录都邀请你进入场景，从细节中拼凑真相。无论你是习惯在睡前寻找一段烧脑短篇，还是利用通勤时间推演谜题，都能在实验档案中找到对应的阅读节奏。</p>
+                        <p>站内内容涵盖悬疑推理档案、都市怪谈、科幻实验与历史谜案四大方向。每份档案都附带背景设定、关键线索与推演路径，部分系列还提供多结局走向。对于喜欢对比不同流派解谜手法的读者，我们整理了「本格推演」与「社会派叙事」的对照索引，方便你按偏好选择。</p>
+                        <p>如果你关心更新节奏，大多数系列保持每周两到三次的更新频率，睡前短篇则每日更新。所有内容均以中文呈现，围绕具体案件或实验展开，不依赖外部链接即可完整阅读。</p>
+                    </div>
+                </section>
+
+                <!-- 2 热门内容推荐 -->
+                <section id="hot" class="section">
+                    <h2 class="section-h2">热门档案推荐 · 本周高热度解谜</h2>
+                    <div class="card-grid">
+                        <article class="content-card">
+                            <div class="card-title">环形废墟：第七号实验室</div>
+                            <div class="card-tags"><span class="tag accent">悬疑推理</span><span class="tag">睡前可读</span><span class="tag">系列解谜</span></div>
+                            <p class="card-desc">废弃实验室中反复出现的同一段录音，时间戳却指向未来。三小时可读完的闭环谜题。</p>
+                            <div class="card-meta"><span>热度 9.8</span><span>更新至第 4 章</span></div>
+                        </article>
+                        <article class="content-card">
+                            <div class="card-title">午夜电台：失踪的调频</div>
+                            <div class="card-tags"><span class="tag accent">都市怪谈</span><span class="tag">通勤短篇</span><span class="tag">单篇完结</span></div>
+                            <p class="card-desc">深夜电台收到一段来自十年前的求救广播，而频率从未变更。适合通勤路上读完的短篇。</p>
+                            <div class="card-meta"><span>热度 9.5</span><span>已完结</span></div>
+                        </article>
+                        <article class="content-card">
+                            <div class="card-title">记忆裁剪师：意识备份疑云</div>
+                            <div class="card-tags"><span class="tag accent">科幻实验</span><span class="tag">逻辑推演</span><span class="tag">连载中</span></div>
+                            <p class="card-desc">当记忆可以备份，一场实验事故让三个人共享同一段童年。谁才是原本的拥有者？</p>
+                            <div class="card-meta"><span>热度 9.3</span><span>更新至第 7 章</span></div>
+                        </article>
+                        <article class="content-card">
+                            <div class="card-title">旧租界档案：消失的钟表匠</div>
+                            <div class="card-tags"><span class="tag accent">历史谜案</span><span class="tag">本格推演</span><span class="tag">系列</span></div>
+                            <p class="card-desc">1930 年代租界区，一位钟表匠在密室中消失，只留下一只逆时针转动的怀表。</p>
+                            <div class="card-meta"><span>热度 9.1</span><span>更新至第 3 章</span></div>
+                        </article>
+                        <article class="content-card">
+                            <div class="card-title">深海监听站：底噪中的低语</div>
+                            <div class="card-tags"><span class="tag accent">悬疑推理</span><span class="tag">睡前短篇</span><span class="tag">已完结</span></div>
+                            <p class="card-desc">深海监听员在例行记录中听到一段不属于任何已知鲸群的信号，循环指向坐标原点。</p>
+                            <div class="card-meta"><span>热度 8.9</span><span>已完结</span></div>
+                        </article>
+                        <article class="content-card">
+                            <div class="card-title">纸片迷宫：档案室的第 13 个抽屉</div>
+                            <div class="card-tags"><span class="tag accent">都市怪谈</span><span class="tag">逻辑推演</span><span class="tag">互动解谜</span></div>
+                            <p class="card-desc">档案室只有 12 个抽屉，但每次清点都会多出一个。里面的文件记录着尚未发生的事。</p>
+                            <div class="card-meta"><span>热度 8.7</span><span>更新至第 2 章</span></div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- 3 最新更新 -->
+                <section id="updates" class="section">
+                    <h2 class="section-h2">最新解谜动态 · 今日更新</h2>
+                    <ul class="update-list">
+                        <li><span class="update-name">环形废墟：第七号实验室</span><span class="update-summary">第 4 章「倒放的钟声」发布，新增两条时间线交叉线索。</span><span class="update-badge">新章</span></li>
+                        <li><span class="update-name">记忆裁剪师</span><span class="update-summary">第 7 章「备份者的自白」更新，揭示第三人意识来源。</span><span class="update-badge">新章</span></li>
+                        <li><span class="update-name">旧租界档案</span><span class="update-summary">第 3 章「齿轮与指纹」上线，补充钟表匠社会关系网。</span><span class="update-badge">新章</span></li>
+                        <li><span class="update-name">纸片迷宫</span><span class="update-summary">第 2 章「抽屉里的天气预报」发布，新增可交互线索图。</span><span class="update-badge">新章</span></li>
+                        <li><span class="update-name">午夜电台：失踪的调频</span><span class="update-summary">番外篇「未寄出的录音带」上线，补完主播视角。</span><span class="update-badge">番外</span></li>
+                        <li><span class="update-name">深海监听站</span><span class="update-summary">新增「坐标对照表」辅助页，方便回溯信号来源。</span><span class="update-badge">辅助</span></li>
+                        <li><span class="update-name">实验档案·季刊</span><span class="update-summary">第 2 期「解谜者的工具」发布，收录推演手记模板。</span><span class="update-badge">季刊</span></li>
+                        <li><span class="update-name">旧租界档案</span><span class="update-summary">人物关系图更新，新增三位证人背景说明。</span><span class="update-badge">更新</span></li>
+                    </ul>
+                </section>
+
+                <!-- 4 分类入口 -->
+                <section id="categories" class="section">
+                    <h2 class="section-h2">分类索引 · 按解谜方向查找</h2>
+                    <div class="category-grid">
+                        <a href="/#hot" class="cat-item">悬疑推理档案</a>
+                        <a href="/#hot" class="cat-item">都市怪谈</a>
+                        <a href="/#hot" class="cat-item">科幻实验</a>
+                        <a href="/#hot" class="cat-item">历史谜案</a>
+                        <a href="/#hot" class="cat-item">睡前通勤短篇</a>
+                        <a href="/#hot" class="cat-item">本格逻辑推演</a>
+                        <a href="/#hot" class="cat-item">社会派叙事</a>
+                        <a href="/#hot" class="cat-item">互动解谜系列</a>
+                    </div>
+                </section>
+
+                <!-- 5 深度解析正文 -->
+                <section id="deep" class="section">
+                    <h2 class="section-h2">深度解析 · 如何进入秘密研究所的叙事世界</h2>
+                    <div class="deep-dive">
+                        <h3>实验档案的叙事逻辑：线索与误导的平衡</h3>
+                        <p>秘密研究所的每一份档案都遵循「信息分层」原则。第一层是场景与人物，让你快速建立代入感；第二层是异常细节，通常以对话、物品或时间矛盾的形式出现；第三层才是推演路径。这种结构让睡前通勤的短篇阅读也能保持完整解谜体验，不会因为碎片时间而丢失关键线索。</p>
+                        <p>以「环形废墟」为例，看似混乱的时间戳其实是对称结构，需要读者在第四章节回看第一章的录音描述。这种设计在悬疑实验档案中反复出现，目的不是为难读者，而是让推演过程本身成为阅读乐趣。</p>
+                        <h3>睡前通勤解谜的节奏控制</h3>
+                        <p>针对碎片化阅读场景，站内大部分短篇控制在 15–25 分钟阅读时长。每个短篇独立成谜，不需要前置知识。对于系列档案，我们会在每个章节末尾附上一段「线索回顾」，用三句话总结当前已确认事实，方便隔天继续推演。</p>
+                        <ul>
+                            <li><strong>睡前短篇</strong>：单篇完结，悬疑浓度适中，适合放松式阅读。</li>
+                            <li><strong>通勤连载</strong>：每章 10–15 分钟，章末附推演提示，适合连续追更。</li>
+                            <li><strong>深度档案</strong>：多章节长篇，建议周末集中阅读，配合线索对照表。</li>
+                        </ul>
+                        <h3>和传统密室解谜的对比：叙事驱动 vs 机关驱动</h3>
+                        <p>传统密室或解谜游戏往往依赖物理机关或密码锁，而秘密研究所的档案更侧重叙事驱动——线索藏在人物动机与时间矛盾中。如果你习惯「找到钥匙开门」式的解谜，可能会觉得这里的推演更偏向心理侧写与逻辑排除。两种方式各有乐趣，站内也提供「机关型解谜」专题作为补充，方便对比体验。</p>
+                        <p>在比较不同解谜类型时，可以从三个维度入手：线索密度、推演深度和阅读时长。悬疑推理档案通常线索密度较高；都市怪谈更注重氛围与暗示；科幻实验则常引入规则型推演。了解这些区别，能帮助你更快找到适合自己的方向。</p>
+                        <h3>常见推演误区与阅读建议</h3>
+                        <p>很多读者在初次接触秘密研究所的档案时，会急于跳过场景描写直接寻找线索，反而容易忽略关键伏笔。建议按顺序阅读，并在每章结束后用一句话写下自己的推理结论，再对照下一章验证。这个习惯能显著提升解谜的满足感。</p>
+                    </div>
+                </section>
+
+                <!-- 6 体验指南 -->
+                <section id="guide" class="section">
+                    <h2 class="section-h2">体验指南 · 从浏览到追更</h2>
+                    <ol class="guide-steps">
+                        <li><strong>选择阅读场景：</strong>睡前或通勤时优先选择「短篇完结」标签；周末有整块时间可进入「系列连载」。</li>
+                        <li><strong>利用分类索引：</strong>按悬疑推理、都市怪谈、科幻实验或历史谜案筛选，快速定位感兴趣的方向。</li>
+                        <li><strong>查看更新动态：</strong>最新解谜板块按时间列出新章，附一句话摘要，方便判断是否追更。</li>
+                        <li><strong>使用搜索框：</strong>输入关键词（如「环形废墟」「记忆裁剪」）可即时过滤页面内相关内容。</li>
+                        <li><strong>收藏系列：</strong>系列档案在标题旁标注更新状态，可记录已读章节，避免重复阅读。</li>
+                        <li><strong>扩展阅读：</strong>每篇档案下方推荐同类型或同作者的其它作品，按推演方式或主题关联。</li>
+                    </ol>
+                </section>
+
+                <!-- 7 FAQ -->
+                <section id="faq" class="section">
+                    <h2 class="section-h2">常见问答 · 关于秘密研究所</h2>
+                    <details class="faq-item" open>
+                        <summary>秘密研究所的悬疑档案适合什么人看？</summary>
+                        <p>适合喜欢逻辑推演、悬疑叙事和碎片化阅读的读者。如果你习惯在睡前或通勤路上读一段有悬念的内容，同时不排斥主动思考线索，这里的档案会比较合拍。对传统密室解谜感兴趣的读者也能找到叙事驱动的替代体验。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>秘密研究所一般多久更新一次？</summary>
+                        <p>睡前短篇通常每日更新；连载系列保持每周两到三次的更新节奏。最新解谜板块会按时间列出所有新章，并标注更新类型（新章、番外、辅助页等）。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>睡前通勤适合看哪类档案？</summary>
+                        <p>推荐「单篇完结」标签下的短篇，例如《午夜电台：失踪的调频》或《深海监听站》。每篇阅读时长约 15–25 分钟，情节完整，不需要前置知识。连载系列则建议周末集中阅读。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>秘密研究所和传统密室解谜有什么区别？</summary>
+                        <p>传统密室更依赖物理机关和密码锁，而秘密研究所的档案以叙事驱动为主，线索藏在人物动机、时间矛盾和场景细节中。站内也设有「机关型解谜」专题，方便对比两种体验。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>如何在站内搜索特定的实验档案？</summary>
+                        <p>页面顶部提供搜索框，输入档案名称或关键词（如「环形废墟」「记忆裁剪」「旧租界」）即可即时过滤页面内可见内容。没有匹配结果时会反馈提示，方便你调整关键词。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>科幻实验类档案需要科学背景才能看懂吗？</summary>
+                        <p>不需要。科幻实验档案更侧重设定内的逻辑自洽和人物选择，技术细节以叙事服务为主。每篇开头会附一段「设定速览」，用几句话交代核心规则，零基础也能顺利进入故事。</p>
+                    </details>
+                </section>
+
+                <!-- 8 用户评论 -->
+                <section id="comments" class="section">
+                    <h2 class="section-h2">读者评论 · 解谜者手记</h2>
+                    <div class="comment-grid">
+                        <div class="comment-card"><div class="comment-user">夜航星</div><div class="comment-text">《环形废墟》的时间线太妙了，读到第四章回头翻第一章，才发现录音里藏了反方向的线索。</div></div>
+                        <div class="comment-card"><div class="comment-user">榛果拿铁</div><div class="comment-text">通勤路上看完《午夜电台》，篇幅刚好，在地铁里读到最后一句话起了一身鸡皮疙瘩。</div></div>
+                        <div class="comment-card"><div class="comment-user">逻辑猫</div><div class="comment-text">科幻实验那几篇设定挺扎实，记忆备份的规则没有前后矛盾，推演起来很舒服。</div></div>
+                        <div class="comment-card"><div class="comment-user">旧书页</div><div class="comment-text">历史谜案的氛围营造得不错，钟表匠那篇的齿轮描写很有画面感。</div></div>
+                        <div class="comment-card"><div class="comment-user">深海鱼</div><div class="comment-text">深海监听站是我目前最喜欢的单篇，底噪低语的意象很抓人。</div></div>
+                        <div class="comment-card"><div class="comment-user">纸飞机</div><div class="comment-text">希望纸片迷宫能快点更，第 13 个抽屉的设定勾起了好奇心。</div></div>
+                        <div class="comment-card"><div class="comment-user">薄荷糖</div><div class="comment-text">抽屉里的天气预报那段，我反复看了三遍，细节密度很高。</div></div>
+                        <div class="comment-card"><div class="comment-user">钟摆</div><div class="comment-text">旧租界的怀表逆时针转，这个意象和结尾呼应得很好。</div></div>
+                        <div class="comment-card"><div class="comment-user">雾都夜话</div><div class="comment-text">都市怪谈的调性把握得准，不会为了吓人而吓人，结尾留白恰到好处。</div></div>
+                        <div class="comment-card"><div class="comment-user">推理小站</div><div class="comment-text">线索回顾功能很实用，隔天继续读也不会断片。</div></div>
+                        <div class="comment-card"><div class="comment-user">白噪声</div><div class="comment-text">搜索框试了「环形」，能直接定位到相关内容，挺方便的。</div></div>
+                        <div class="comment-card"><div class="comment-user">慢半拍</div><div class="comment-text">有些篇章的推演节奏偏慢，适合耐心型读者，比如我。</div></div>
+                        <div class="comment-card"><div class="comment-user">折光</div><div class="comment-text">科幻实验里关于意识备份的伦理讨论，比预想的更有分量。</div></div>
+                        <div class="comment-card"><div class="comment-user">星尘</div><div class="comment-text">希望多出一些本格推演的短篇，现在的比例稍微有点少。</div></div>
+                    </div>
+                </section>
+
+                <!-- 9 相关资讯 -->
+                <section id="news" class="section">
+                    <h2 class="section-h2">实验资讯 · 近期动态</h2>
+                    <ul class="news-list">
+                        <li>
+                            <span class="news-title">「环形废墟」系列增设线索对照表</span>
+                            <span class="news-date">2025-03-18</span>
+                            <p class="news-summary">为方便多章节读者回溯时间线，第七号实验室新增可折叠的线索对照表，按章节列出关键物品与时间戳。</p>
+                        </li>
+                        <li>
+                            <span class="news-title">睡前短篇专题「午夜频率」上线</span>
+                            <span class="news-date">2025-03-15</span>
+                            <p class="news-summary">收录六篇以电台、监听站、夜间广播为背景的短篇，统一标注阅读时长，方便通勤场景选择。</p>
+                        </li>
+                        <li>
+                            <span class="news-title">历史谜案方向新增人物关系图功能</span>
+                            <span class="news-date">2025-03-12</span>
+                            <p class="news-summary">旧租界档案系列开始提供可视化人物关系图，帮助读者在复杂案件中理清证人之间的关联。</p>
+                        </li>
+                        <li>
+                            <span class="news-title">「本格推演」与「社会派叙事」对照索引更新</span>
+                            <span class="news-date">2025-03-09</span>
+                            <p class="news-summary">分类索引页新增两种叙事风格的对照说明，按线索密度和阅读时长给出选择建议。</p>
+                        </li>
+                        <li>
+                            <span class="news-title">记忆裁剪师进入最终章筹备</span>
+                            <span class="news-date">2025-03-06</span>
+                            <p class="news-summary">科幻实验连载《记忆裁剪师》确认剩余两章，作者在动态中透露将回收早期备份设定。</p>
+                        </li>
+                        <li>
+                            <span class="news-title">实验档案季刊第二期发布</span>
+                            <span class="news-date">2025-03-03</span>
+                            <p class="news-summary">本期主题为「解谜者的工具」，收录推演手记模板、线索整理方法及读者投稿的推理笔记。</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- 10 相关推荐 -->
+                <section id="related" class="section">
+                    <h2 class="section-h2">相关推荐 · 按方向探索</h2>
+                    <div class="related-tags">
+                        <a class="tag" href="/#hot">悬疑推理 · 闭环时间线</a>
+                        <a class="tag" href="/#hot">都市怪谈 · 夜间广播</a>
+                        <a class="tag" href="/#hot">科幻实验 · 记忆备份</a>
+                        <a class="tag" href="/#hot">历史谜案 · 密室消失</a>
+                        <a class="tag" href="/#hot">睡前短篇 · 单篇完结</a>
+                        <a class="tag" href="/#hot">通勤连载 · 章末回顾</a>
+                        <a class="tag" href="/#hot">本格推演 · 线索对照</a>
+                        <a class="tag" href="/#hot">互动解谜 · 抽屉档案</a>
+                    </div>
+                </section>
+
+                <!-- 11 创作者证言 / 精选内容 -->
+                <section id="testimonial" class="section">
+                    <h2 class="section-h2">创作者手记 · 关于「秘密研究所」</h2>
+                    <div class="testimonial">
+                        “我们想把解谜的乐趣还原成最朴素的形式——一段文字、一个场景、一条等待被注意到的线索。秘密研究所不是一个需要通关的游戏，而是一间可以随时走进、按自己节奏翻看的档案室。睡前十分钟，或者通勤的几站路，你都可以完成一次完整的推演。”
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- 右栏 -->
+            <aside class="right-col" aria-label="辅助阅读">
+                <div class="col-sticky">
+                    <div class="side-card">
+                        <div class="side-title">本页目录</div>
+                        <ul class="toc-list">
+                            <li><a href="/#intro">档案简介</a></li>
+                            <li><a href="/#hot">热门档案推荐</a></li>
+                            <li><a href="/#updates">最新解谜动态</a></li>
+                            <li><a href="/#categories">分类索引</a></li>
+                            <li><a href="/#deep">深度解析</a></li>
+                            <li><a href="/#guide">体验指南</a></li>
+                            <li><a href="/#faq">常见问答</a></li>
+                            <li><a href="/#comments">读者评论</a></li>
+                            <li><a href="/#news">实验资讯</a></li>
+                        </ul>
+                    </div>
+                    <div class="side-card">
+                        <div class="side-title">热门条目</div>
+                        <ul class="hot-list">
+                            <li><span class="hot-title">环形废墟：第七号实验室</span><span class="hot-meta">悬疑推理 · 热度 9.8</span></li>
+                            <li><span class="hot-title">午夜电台：失踪的调频</span><span class="hot-meta">都市怪谈 · 热度 9.5</span></li>
+                            <li><span class="hot-title">记忆裁剪师</span><span class="hot-meta">科幻实验 · 热度 9.3</span></li>
+                            <li><span class="hot-title">旧租界档案：消失的钟表匠</span><span class="hot-meta">历史谜案 · 热度 9.1</span></li>
+                            <li><span class="hot-title">深海监听站</span><span class="hot-meta">悬疑推理 · 热度 8.9</span></li>
+                        </ul>
+                    </div>
+                    <div class="side-card">
+                        <div class="side-title">延伸阅读</div>
+                        <nav class="side-nav">
+                            <a href="/#deep">本格推演 vs 社会派叙事</a>
+                            <a href="/#deep">睡前通勤解谜节奏</a>
+                            <a href="/#guide">如何收藏连载档案</a>
+                            <a href="/#faq">科幻实验需要背景知识吗</a>
+                        </nav>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <div class="container search-feedback" id="searchFeedback" role="status" aria-live="polite"></div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">秘密研究所</div>
+                    <p class="footer-desc">悬疑实验档案与逻辑解谜内容站，睡前通勤皆可阅读。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>档案方向</h4>
+                    <a href="/#categories">悬疑推理档案</a>
+                    <a href="/#categories">都市怪谈</a>
+                    <a href="/#categories">科幻实验</a>
+                    <a href="/#categories">历史谜案</a>
+                </div>
+                <div class="footer-col">
+                    <h4>阅读入口</h4>
+                    <a href="/#hot">热门档案</a>
+                    <a href="/#updates">最新解谜</a>
+                    <a href="/#guide">体验指南</a>
+                    <a href="/#faq">常见问答</a>
+                </div>
+                <div class="footer-col">
+                    <h4>关于</h4>
+                    <a href="/#intro">档案简介</a>
+                    <a href="/#testimonial">创作者手记</a>
+                    <a href="/#news">实验资讯</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>© 2025 秘密研究所 · 内容示例站点</span>
+                <span>部分内容为示例数据，仅用于展示页面结构</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            const searchInput = document.getElementById('searchInput');
+            const searchBtn = document.getElementById('searchBtn');
+            const feedback = document.getElementById('searchFeedback');
+            const allSections = document.querySelectorAll('.center-col .section, .content-card, .update-list li, .cat-item, .faq-item, .comment-card, .news-list li, .related-tags .tag, .hot-list li');
+
+            function filterContent() {
+                const query = searchInput.value.trim().toLowerCase();
+                let visibleCount = 0;
+                let totalCount = 0;
+
+                // 重置
+                document.querySelectorAll('.center-col .section').forEach(sec => sec.classList.remove('hidden-by-search'));
+                document.querySelectorAll('.content-card, .update-list li, .cat-item, .faq-item, .comment-card, .news-list li, .related-tags .tag, .hot-list li').forEach(el => {
+                    el.classList.remove('hidden-by-search');
+                });
+
+                if (!query) {
+                    feedback.classList.remove('show');
+                    feedback.textContent = '';
+                    return;
+                }
+
+                // 过滤卡片/列表项
+                const filterableItems = document.querySelectorAll('.content-card, .update-list li, .cat-item, .faq-item, .comment-card, .news-list li, .related-tags .tag');
+                filterableItems.forEach(el => {
+                    totalCount++;
+                    const text = el.textContent.toLowerCase();
+                    if (text.includes(query)) {
+                        el.classList.remove('hidden-by-search');
+                        visibleCount++;
+                    } else {
+                        el.classList.add('hidden-by-search');
+                    }
+                });
+
+                // 如果某个 section 下所有可过滤项都隐藏了，隐藏该 section
+                document.querySelectorAll('.center-col .section').forEach(sec => {
+                    const items = sec.querySelectorAll('.content-card, .update-list li, .cat-item, .faq-item, .comment-card, .news-list li, .related-tags .tag');
+                    if (items.length > 0) {
+                        const anyVisible = Array.from(items).some(el => !el.classList.contains('hidden-by-search'));
+                        if (!anyVisible) {
+                            sec.classList.add('hidden-by-search');
+                        }
+                    }
+                });
+
+                if (visibleCount === 0) {
+                    feedback.textContent = '没有找到与「' + searchInput.value.trim() + '」相关的内容，请尝试其他关键词，如「环形」「记忆」「旧租界」。';
+                    feedback.classList.add('show');
+                } else {
+                    feedback.textContent = '找到 ' + visibleCount + ' 条相关内容（共 ' + totalCount + ' 条可检索项）。';
+                    feedback.classList.add('show');
+                }
+            }
+
+            searchBtn.addEventListener('click', filterContent);
+            searchInput.addEventListener('input', filterContent);
+            searchInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    filterContent();
+                }
+            });
+        })();
+    </script>
+</body>
+  </html>
